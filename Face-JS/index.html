@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuzni Aniqlash va Tanib Olish</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Face-api.js kutubxonasini ulash -->
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.js"></script>
+    <!-- Toast xabarnomalar uchun kutubxona -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Yuzni Aniqlash va Tanib Olish Tizimi</h1>
+        
+        <div class="video-container">
+            <video id="video" width="720" height="560" autoplay muted playsinline crossorigin="anonymous"></video>
+            <canvas id="overlay" width="720" height="560"></canvas>
+        </div>
+
+        <div class="controls">
+            <div class="input-group">
+                <input type="text" id="nameInput" placeholder="Ismni kiriting">
+                <button id="saveButton">Yuzni Saqlash</button>
+            </div>
+            <button id="startButton">Kamerani Yoqish</button>
+            <button id="recognizeButton">Yuzni Tanib Olish</button>
+            <button id="stopButton" disabled>Kamerani To'xtatish</button>
+            <button id="clearButton">Ma'lumotlarni Tozalash</button>
+        </div>
+
+        <div id="status" class="status"></div>
+        
+        <div class="saved-faces">
+            <h2>Saqlangan Yuzlar</h2>
+            <div id="facesList" class="faces-list"></div>
+        </div>
+    </div>
+</body>
+</html> 
